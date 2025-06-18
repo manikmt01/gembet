@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Title</title>
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/style.min.css">
+
+  <style>
+    /* Add this in your custom CSS or inline */
+    .dropdown-menu {
+      display: none;
+    }
+
+    .dropdown-menu.show {
+      display: block;
+    }
+
+    .offcanvas {
+      display: none;
+    }
+
+    .offcanvas.offcanvas-open {
+      display: block;
+    }
+  </style>
+</head>
+
+<body class="font-sans bg-surface-secondary text-white">
+
+  <!-- Header -->
+  <header class="bg-gray-900 px-10 py-4">
+    <div class="flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex flex-row gap-8 items-center">
+        <a href="index.html"><img src="./images/Logo.svg" alt="gembet"></a>
+
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex space-x-4 items-center">
+          <ul class="flex flex-row gap-6">
+            <li class="relative dropdown">
+              <button
+                class="dropdown-toggle flex items-center text-indigo-100 text-base font-medium font-['Inter'] leading-tight"
+                data-dropdown>
+                Sports
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M5.51431 7.82698C5.18944 8.15184 5.18944 8.68495 5.51431 9.00982L9.67924 13.1747C10.0041 13.4996 10.5289 13.4996 10.8538 13.1747L15.027 9.00982C15.3519 8.68495 15.3519 8.16017 15.027 7.83531C14.7021 7.51044 14.1774 7.51044 13.8525 7.83531L10.279 11.4088L6.69715 7.82698C6.37228 7.50211 5.83917 7.50211 5.51431 7.82698Z"
+                    fill="#E5EAFA" />
+                </svg>
+              </button>
+              <div class="dropdown-menu dropdown-content shadow-lg">
+                <a href="#" class="block px-4 py-2">Football</a>
+                <a href="#" class="block px-4 py-2">Basketball</a>
+              </div>
+            </li>
+            <li><a href="#" class="text-indigo-100 text-base font-medium">Slots</a></li>
+            <li><a href="#" class="text-indigo-100 text-base font-medium">Live Casino</a></li>
+            <li><a href="#" class="text-indigo-100 text-base font-medium">Promotions</a></li>
+            <li><a href="#" class="text-indigo-100 text-base font-medium">VIP Club</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- CTAs -->
+      <div class="flex items-center space-x-4">
+        <ul class="hidden md:flex flex-row flex-wrap gap-2 items-center">
+          <li class="relative dropdown">
+            <button class="dropdown-toggle w-9 h-9 flex justify-center items-center bg-surface-input rounded-full"
+              data-dropdown>
+              <!-- Search Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
+                <path
+                  d="M8.54167 2.5C5.21481 2.5 2.5 5.21482 2.5 8.54167C2.5 11.8685 5.21481 14.5833 8.54167 14.5833C9.90548 14.5833 11.162 14.1221 12.1753 13.3545L16.0775 17.2559C16.1543 17.3358 16.2462 17.3997 16.348 17.4437C16.4498 17.4877 16.5593 17.5109 16.6702 17.512C16.781 17.5132 16.891 17.4922 16.9937 17.4502C17.0963 17.4083 17.1896 17.3464 17.268 17.268C17.3464 17.1896 17.4083 17.0963 17.4502 16.9937C17.4922 16.891 17.5132 16.781 17.512 16.6702C17.5109 16.5593 17.4877 16.4498 17.4437 16.348C17.3997 16.2462 17.3358 16.1543 17.2559 16.0775L13.3545 12.1753C14.1221 11.162 14.5833 9.90548 14.5833 8.54167C14.5833 5.21482 11.8685 2.5 8.54167 2.5ZM8.54167 4.16667C10.9678 4.16667 12.9167 6.11555 12.9167 8.54167C12.9167 9.70655 12.4642 10.7586 11.7285 11.5405C11.6569 11.5924 11.594 11.6553 11.5422 11.7269C10.76 12.4635 9.70738 12.9167 8.54167 12.9167C6.11555 12.9167 4.16667 10.9678 4.16667 8.54167C4.16667 6.11555 6.11555 4.16667 8.54167 4.16667Z"
+                  fill="#E5EAFA" />
+              </svg>
+            </button>
+            <div class="dropdown-menu dropdown-content shadow-lg w-[300px] right-0 mt-2">
+              <form
+                class="relative flex items-center bg-white/80 backdrop-blur-md border border-gray-200 rounded-full shadow-md hover:shadow-lg transition-all duration-300">
+
+                <!-- Search Icon -->
+                <div class="pl-5 text-gray-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1011 18.5a7.5 7.5 0 005.65-2.85z" />
+                  </svg>
+                </div>
+
+                <!-- Input -->
+                <input type="text" placeholder="Search now"
+                  class="w-full px-4 py-3 pl-3 pr-32 text-sm text-gray-700 placeholder-gray-400 bg-transparent focus:outline-none" />
+
+                <!-- Submit Button -->
+                <button type="submit"
+                  class="absolute right-1.5 top-1/2 -translate-y-1/2 bg-surface-action-primary text-white text-sm font-medium px-5 py-2.5 rounded-full transition-all duration-200">
+                  Search
+                </button>
+              </form>
+            </div>
+          </li>
+          <li>
+            <a href=""
+              class=" px-1 py-2 rounded-full inline-flex items-center gap-2 text-center justify-center text-text-action text-sm font-bold font-['Inter'] leading-none">Log
+              In
+            </a>
+          </li>
+          <li>
+            <a href=""
+              class="h-9 max-w-96 min-w-24 px-4 py-2 bg-surface-action-primary rounded-full inline-flex items-center gap-2 text-center justify-center text-text-on-action text-sm font-bold font-['Inter'] leading-none">Join
+              Now
+            </a>
+          </li>
+          <li class="relative dropdown">
+            <button class="dropdown-toggle flex items-center space-x-2" data-dropdown>
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                <g clip-path="url(#clip0_50731_275)">
+                  <path
+                    d="M18 36C27.9411 36 36 27.9411 36 18C36 8.05887 27.9411 0 18 0C8.05887 0 0 8.05887 0 18C0 27.9411 8.05887 36 18 36Z"
+                    fill="#F0F0F0" />
+                  <path
+                    d="M13.3038 35.3803C11.0008 34.7595 8.88057 33.6935 7.04114 32.2797L13.3038 26.0161V35.3803ZM28.9591 32.2797C27.1196 33.6936 24.9987 34.7594 22.6954 35.3803V26.0161L28.9591 32.2797ZM3.72083 28.9594C2.30708 27.12 1.24112 24.9998 0.620239 22.6967H9.98352L3.72083 28.9594ZM35.38 22.6967C34.7592 24.9998 33.6931 27.12 32.2794 28.9594L26.0157 22.6967H35.38ZM9.9845 13.3051H0.620239C1.24103 11.0017 2.30691 8.88103 3.72083 7.04144L9.9845 13.3051ZM32.2794 7.04144C33.6932 8.88101 34.7592 11.0019 35.38 13.3051H26.0157L32.2794 7.04144ZM22.6954 0.620544C24.9988 1.2414 27.1195 2.30722 28.9591 3.72113L22.6954 9.9848V0.620544ZM13.3038 9.98383L7.04114 3.72113C8.88054 2.30738 11.0007 1.24142 13.3038 0.620544V9.98383Z"
+                    fill="#0052B4" />
+                  <path
+                    d="M18 0C18.7957 0 19.5791 0.0523075 20.3477 0.152344V15.6523H35.8477C35.9477 16.4208 36 17.2043 36 18C36 18.7958 35.9477 19.5791 35.8477 20.3477H20.3477V35.8477C19.5792 35.9478 18.7957 36 18 36C17.2042 36 16.4209 35.9477 15.6523 35.8477V20.3477H0.152344C0.0523016 19.5792 0 18.7958 0 18C0 17.2043 0.0523075 16.4209 0.152344 15.6523H15.6523V0.152344C16.4208 0.0523017 17.2042 0 18 0ZM13.3047 24.9092L6.42773 31.7861C6.02752 31.4499 5.64077 31.097 5.27148 30.7275L13.3037 22.6953H13.3047V24.9092ZM31.7861 29.5723C31.4499 29.9725 31.0969 30.3583 30.7275 30.7275L22.6953 22.6953H24.9092L31.7861 29.5723ZM13.3047 13.3047H11.0908L4.21387 6.42773C4.5501 6.02752 4.90304 5.64077 5.27246 5.27148L13.3047 13.3047ZM29.5723 4.21484C29.9724 4.55092 30.3584 4.90315 30.7275 5.27246L22.6953 13.3047V11.0908L29.5723 4.21484Z"
+                    fill="#D80027" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_50731_275">
+                    <rect width="36" height="36" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+            <div class="dropdown-menu dropdown-content shadow-lg right-0">
+              <a href="#" class="block px-4 py-2">English</a>
+              <a href="#" class="block px-4 py-2">Spanish</a>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Mobile Menu Icon -->
+        <button class="md:hidden text-white" data-mobile-menu-toggle>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Offcanvas -->
+    <div class="offcanvas fixed inset-0 bg-black bg-opacity-50 z-50 md:hidden" id="mobileMenu">
+      <div class="bg-gray-900 text-white w-80 max-w-full h-full p-4 relative">
+        <button class="absolute top-4 right-4 text-2xl text-white cursor-pointer" data-close-mobile>×</button>
+        <div class="mt-5">
+          <!-- Desktop Nav -->
+          <nav class="flex space-x-4 items-center">
+            <ul class="flex flex-col gap-3">
+              <li class="relative dropdown">
+                <button
+                  class="dropdown-toggle flex items-center text-indigo-100 text-base font-medium font-['Inter'] leading-tight"
+                  data-dropdown>
+                  Sports
+                  <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M5.51431 7.82698C5.18944 8.15184 5.18944 8.68495 5.51431 9.00982L9.67924 13.1747C10.0041 13.4996 10.5289 13.4996 10.8538 13.1747L15.027 9.00982C15.3519 8.68495 15.3519 8.16017 15.027 7.83531C14.7021 7.51044 14.1774 7.51044 13.8525 7.83531L10.279 11.4088L6.69715 7.82698C6.37228 7.50211 5.83917 7.50211 5.51431 7.82698Z"
+                      fill="#E5EAFA" />
+                  </svg>
+                </button>
+                <div class="dropdown-menu dropdown-content shadow-lg">
+                  <a href="#" class="block px-4 py-2">Football</a>
+                  <a href="#" class="block px-4 py-2">Basketball</a>
+                </div>
+              </li>
+              <li><a href="#" class="text-indigo-100 text-base font-medium">Slots</a></li>
+              <li><a href="#" class="text-indigo-100 text-base font-medium">Live Casino</a></li>
+              <li><a href="#" class="text-indigo-100 text-base font-medium">Promotions</a></li>
+              <li><a href="#" class="text-indigo-100 text-base font-medium">VIP Club</a></li>
+            </ul>
+          </nav>
+
+          <!-- CTAs -->
+          <div class="flex items-center space-x-4 mt-4">
+            <ul class="flex flex-row flex-wrap gap-3 items-center">
+              <li class="relative dropdown">
+                <button class="dropdown-toggle w-9 h-9 flex justify-center items-center bg-surface-input rounded-full"
+                  data-dropdown>
+                  <!-- Search Icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
+                    <path
+                      d="M8.54167 2.5C5.21481 2.5 2.5 5.21482 2.5 8.54167C2.5 11.8685 5.21481 14.5833 8.54167 14.5833C9.90548 14.5833 11.162 14.1221 12.1753 13.3545L16.0775 17.2559C16.1543 17.3358 16.2462 17.3997 16.348 17.4437C16.4498 17.4877 16.5593 17.5109 16.6702 17.512C16.781 17.5132 16.891 17.4922 16.9937 17.4502C17.0963 17.4083 17.1896 17.3464 17.268 17.268C17.3464 17.1896 17.4083 17.0963 17.4502 16.9937C17.4922 16.891 17.5132 16.781 17.512 16.6702C17.5109 16.5593 17.4877 16.4498 17.4437 16.348C17.3997 16.2462 17.3358 16.1543 17.2559 16.0775L13.3545 12.1753C14.1221 11.162 14.5833 9.90548 14.5833 8.54167C14.5833 5.21482 11.8685 2.5 8.54167 2.5ZM8.54167 4.16667C10.9678 4.16667 12.9167 6.11555 12.9167 8.54167C12.9167 9.70655 12.4642 10.7586 11.7285 11.5405C11.6569 11.5924 11.594 11.6553 11.5422 11.7269C10.76 12.4635 9.70738 12.9167 8.54167 12.9167C6.11555 12.9167 4.16667 10.9678 4.16667 8.54167C4.16667 6.11555 6.11555 4.16667 8.54167 4.16667Z"
+                      fill="#E5EAFA" />
+                  </svg>
+                </button>
+                <div class="dropdown-menu dropdown-content shadow-lg w-[250px] left-0 mt-2">
+                  <form
+                    class="relative flex items-center bg-white/80 backdrop-blur-md border border-gray-200 rounded-full shadow-md hover:shadow-lg transition-all duration-300">
+
+                    <!-- Search Icon -->
+                    <div class="pl-5 text-gray-500">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1011 18.5a7.5 7.5 0 005.65-2.85z" />
+                      </svg>
+                    </div>
+
+                    <!-- Input -->
+                    <input type="text" placeholder="Search now"
+                      class="w-full px-4 py-3 pl-3 pr-32 text-sm text-gray-700 placeholder-gray-400 bg-transparent focus:outline-none" />
+
+                    <!-- Submit Button -->
+                    <button type="submit"
+                      class="absolute right-1.5 top-1/2 -translate-y-1/2 bg-surface-action-primary text-white text-sm font-medium px-5 py-2.5 rounded-full transition-all duration-200">
+                      Search
+                    </button>
+                  </form>
+                </div>
+              </li>
+              <li>
+                <a href=""
+                  class=" px-1 py-2 rounded-full inline-flex items-center gap-2 text-center justify-center text-text-action text-sm font-bold font-['Inter'] leading-none">Log
+                  In
+                </a>
+              </li>
+              <li>
+                <a href=""
+                  class="h-9 max-w-96 min-w-24 px-4 py-2 bg-surface-action-primary rounded-full inline-flex items-center gap-2 text-center justify-center text-text-on-action text-sm font-bold font-['Inter'] leading-none">Join
+                  Now
+                </a>
+              </li>
+              <li class="relative dropdown">
+                <button class="dropdown-toggle flex items-center space-x-2" data-dropdown>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                    <g clip-path="url(#clip0_50731_275)">
+                      <path
+                        d="M18 36C27.9411 36 36 27.9411 36 18C36 8.05887 27.9411 0 18 0C8.05887 0 0 8.05887 0 18C0 27.9411 8.05887 36 18 36Z"
+                        fill="#F0F0F0" />
+                      <path
+                        d="M13.3038 35.3803C11.0008 34.7595 8.88057 33.6935 7.04114 32.2797L13.3038 26.0161V35.3803ZM28.9591 32.2797C27.1196 33.6936 24.9987 34.7594 22.6954 35.3803V26.0161L28.9591 32.2797ZM3.72083 28.9594C2.30708 27.12 1.24112 24.9998 0.620239 22.6967H9.98352L3.72083 28.9594ZM35.38 22.6967C34.7592 24.9998 33.6931 27.12 32.2794 28.9594L26.0157 22.6967H35.38ZM9.9845 13.3051H0.620239C1.24103 11.0017 2.30691 8.88103 3.72083 7.04144L9.9845 13.3051ZM32.2794 7.04144C33.6932 8.88101 34.7592 11.0019 35.38 13.3051H26.0157L32.2794 7.04144ZM22.6954 0.620544C24.9988 1.2414 27.1195 2.30722 28.9591 3.72113L22.6954 9.9848V0.620544ZM13.3038 9.98383L7.04114 3.72113C8.88054 2.30738 11.0007 1.24142 13.3038 0.620544V9.98383Z"
+                        fill="#0052B4" />
+                      <path
+                        d="M18 0C18.7957 0 19.5791 0.0523075 20.3477 0.152344V15.6523H35.8477C35.9477 16.4208 36 17.2043 36 18C36 18.7958 35.9477 19.5791 35.8477 20.3477H20.3477V35.8477C19.5792 35.9478 18.7957 36 18 36C17.2042 36 16.4209 35.9477 15.6523 35.8477V20.3477H0.152344C0.0523016 19.5792 0 18.7958 0 18C0 17.2043 0.0523075 16.4209 0.152344 15.6523H15.6523V0.152344C16.4208 0.0523017 17.2042 0 18 0ZM13.3047 24.9092L6.42773 31.7861C6.02752 31.4499 5.64077 31.097 5.27148 30.7275L13.3037 22.6953H13.3047V24.9092ZM31.7861 29.5723C31.4499 29.9725 31.0969 30.3583 30.7275 30.7275L22.6953 22.6953H24.9092L31.7861 29.5723ZM13.3047 13.3047H11.0908L4.21387 6.42773C4.5501 6.02752 4.90304 5.64077 5.27246 5.27148L13.3047 13.3047ZM29.5723 4.21484C29.9724 4.55092 30.3584 4.90315 30.7275 5.27246L22.6953 13.3047V11.0908L29.5723 4.21484Z"
+                        fill="#D80027" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_50731_275">
+                        <rect width="36" height="36" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </button>
+                <div class="dropdown-menu dropdown-content shadow-lg right-0">
+                  <a href="#" class="block px-4 py-2">English</a>
+                  <a href="#" class="block px-4 py-2">Spanish</a>
+                </div>
+              </li>
+            </ul>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+  <!-- JavaScript -->
+  <script>
+    // Reusable Dropdown Logic
+    document.addEventListener('click', function (e) {
+      const isDropdownBtn = e.target.closest('[data-dropdown]');
+      const isInsideDropdown = e.target.closest('.dropdown');
+      const allMenus = document.querySelectorAll('.dropdown-menu');
+
+      if (isDropdownBtn) {
+        const parent = isDropdownBtn.closest('.dropdown');
+        const menu = parent.querySelector('.dropdown-menu');
+
+        allMenus.forEach(m => {
+          if (m !== menu) m.classList.remove('show');
+        });
+
+        menu.classList.toggle('show');
+      } else if (!isInsideDropdown) {
+        allMenus.forEach(m => m.classList.remove('show'));
+      }
+    });
+
+    // Mobile Menu Toggle
+    const mobileToggleBtn = document.querySelector('[data-mobile-menu-toggle]');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeMobileBtn = document.querySelector('[data-close-mobile]');
+
+    mobileToggleBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('offcanvas-open');
+    });
+
+    closeMobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('offcanvas-open');
+    });
+  </script>
+</body>
+
+</html>
