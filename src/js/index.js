@@ -1,3 +1,19 @@
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  const content = document.getElementById('content');
+
+  // Add animation class
+  preloader.classList.add('hide-preloader');
+
+  // Fade in content
+  // content.classList.remove('opacity-0');
+
+  // Fully remove preloader after animation
+  setTimeout(() => {
+    preloader.remove(); // Or use: preloader.style.display = 'none';
+    document.body.classList.remove('overflow-hidden');
+  }, 800); // Match animation duration
+});
 //Header
 
 // Reusable Dropdown Logic
@@ -21,17 +37,17 @@ document.addEventListener('click', function (e) {
 });
 
 // Mobile Menu Toggle
-// const mobileToggleBtn = document.querySelector('[data-mobile-menu-toggle]');
-// const mobileMenu = document.getElementById('mobileMenu');
-// const closeMobileBtn = document.querySelector('[data-close-mobile]');
+const mobileToggleBtn = document.querySelector('[data-mobile-menu-toggle]');
+const mobileMenu = document.getElementById('mobileMenu');
+const closeMobileBtn = document.querySelector('[data-close-mobile]');
 
-// mobileToggleBtn.addEventListener('click', () => {
-//   mobileMenu.classList.toggle('offcanvas-open');
-// });
+mobileToggleBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('offcanvas-open');
+});
 
-// closeMobileBtn.addEventListener('click', () => {
-//   mobileMenu.classList.remove('offcanvas-open');
-// });
+closeMobileBtn.addEventListener('click', () => {
+  mobileMenu.classList.remove('offcanvas-open');
+});
 
 //Slider
 const sliderWrapper = document.getElementById('sliderWrapper');
