@@ -14,7 +14,6 @@
     rel="stylesheet">
 
   <!-- custom css  -->
-
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
@@ -37,10 +36,10 @@
 
         <!-- Desktop Nav -->
         <nav class="hidden lg:flex space-x-4 items-center">
-          <ul class="flex flex-row gap-6">
-            <li class="relative dropdown">
+          <ul class="flex flex-row gap-6 items-center">
+            <li class="relative dropdown group transition-all">
               <button
-                class="dropdown-toggle flex justify-center items-center text-indigo-100 text-base font-medium hover:text-text-action transition-all font-Inter leading-tight cursor-pointer"
+                class="dropdown-toggle flex justify-center items-center text-indigo-100 text-base font-medium hover:text-text-action transition-all font-Inter leading-tight cursor-pointer hoverEffect"
                 data-dropdown>
                 Sports
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none">
@@ -49,7 +48,7 @@
                     fill="#E5EAFA" />
                 </svg>
               </button>
-              <div class="dropdown-menu dropdown-content shadow-lg">
+              <div class="dropdown-menu dropdown-content shadow-lg group-hover:!block transition-all">
                 <a href="#"
                   class="block px-4 py-2 text-indigo-100 text-base font-medium hover:text-text-action transition-all">Football</a>
                 <a href="#"
@@ -57,12 +56,16 @@
               </div>
             </li>
             <li><a href="#"
-                class="text-indigo-100 text-base font-medium hover:text-text-action transition-all">Slots</a></li>
-            <li><a href="#" class="text-indigo-100 text-base font-medium hover:text-text-action transition-all">Live
+                class="text-indigo-100 text-base font-medium hover:text-text-action transition-all hoverEffect">Slots</a>
+            </li>
+            <li><a href="#"
+                class="text-indigo-100 text-base font-medium hover:text-text-action transition-all hoverEffect">Live
                 Casino</a></li>
             <li><a href="#"
-                class="text-indigo-100 text-base font-medium hover:text-text-action transition-all">Promotions</a></li>
-            <li><a href="#" class="text-indigo-100 text-base font-medium hover:text-text-action transition-all">VIP
+                class="text-indigo-100 text-base font-medium hover:text-text-action transition-all hoverEffect">Promotions</a>
+            </li>
+            <li><a href="#"
+                class="text-indigo-100 text-base font-medium hover:text-text-action transition-all hoverEffect">VIP
                 Club</a></li>
           </ul>
         </nav>
@@ -71,8 +74,8 @@
       <div class="flex items-center space-x-4">
         <ul class="flex flex-row flex-wrap gap-2 items-center">
           <li class="relative dropdown md:block hidden">
-            <button class="dropdown-toggle w-9 h-9 flex justify-center items-center bg-surface-input rounded-full"
-              data-dropdown>
+            <button data-modal-target="modal-1"
+              class="open-modal  w-9 h-9 flex justify-center items-center bg-surface-input hover:bg-surface-input-highlight transition-all cursor-pointer rounded-full">
               <!-- Search Icon -->
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
                 <path
@@ -80,34 +83,11 @@
                   fill="#E5EAFA" />
               </svg>
             </button>
-            <div class="dropdown-menu dropdown-content shadow-lg w-[300px] right-0 mt-2">
-              <form
-                class="relative flex items-center bg-white/80 backdrop-blur-md border border-gray-200 rounded-full shadow-md hover:shadow-lg transition-all duration-300">
 
-                <!-- Search Icon -->
-                <div class="pl-5 text-gray-500">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1011 18.5a7.5 7.5 0 005.65-2.85z" />
-                  </svg>
-                </div>
-
-                <!-- Input -->
-                <input type="text" placeholder="Search now"
-                  class="w-full px-4 py-3 pl-3 pr-32 text-sm text-gray-700 placeholder-gray-400 bg-transparent focus:outline-none" />
-
-                <!-- Submit Button -->
-                <button type="submit"
-                  class="absolute right-1.5 top-1/2 -translate-y-1/2 bg-surface-action-primary text-white text-sm font-medium px-5 py-2.5 rounded-full transition-all duration-200">
-                  Search
-                </button>
-              </form>
-            </div>
           </li>
           <li>
             <a href=""
-              class=" px-1 py-2 rounded-full inline-flex items-center gap-2 text-center justify-center text-text-action text-sm font-bold font-Inter leading-none">Log
+              class=" px-1 py-2 rounded-full inline-flex items-center gap-2 text-center justify-center text-text-action text-sm font-bold font-Inter leading-none hover:text-white transition-all">Log
               In
             </a>
           </li>
@@ -117,11 +97,11 @@
               Now
             </a>
           </li>
-          <li class="relative dropdown">
+          <li class="relative dropdown group transition-all ">
             <button class="dropdown-toggle flex items-center space-x-2" data-dropdown>
               <img src="./images/toggle.svg" alt="toggle">
             </button>
-            <div class="dropdown-menu dropdown-content shadow-lg right-0">
+            <div class="dropdown-menu dropdown-content shadow-lg right-0 group-hover:!block transition-all">
               <a href="#"
                 class="block px-4 py-2 text-indigo-100 text-base font-medium hover:text-text-action transition-all">English</a>
               <a href="#"
@@ -209,7 +189,7 @@
           Exclusive
           Bonuses
           with Our Limited-Time Promotions!</h2>
-        <div class="overflow-x-auto">
+        <div class="overflow-x-auto overflow-y-hidden">
           <div class="grid grid-cols-3 gap-3 min-w-[940px]">
 
             <!-- single item start  -->
@@ -315,7 +295,7 @@
         <!-- Tab Content -->
         <div id="tab-content">
           <div data-tab-content="sports" class="tab-pane ">
-            <div class="overflow-x-auto">
+            <div class="overflow-x-auto overflow-y-hidden">
               <div class="grid grid-cols-4 gap-7 lg:min-w-auto min-w-[1200px]">
 
                 <!-- single item start  -->
@@ -354,8 +334,7 @@
                     </a>
 
                   </div>
-                  <div
-                    class="px-3 pt-2 pb-3 bg-gradient-to-b from-[#19387e] to-[#17274b] gap-2 rounded-bl-lg rounded-br-lg grid grid-cols-3">
+                  <div class="px-3 pt-2 pb-3 Bggradient gap-2 rounded-bl-lg rounded-br-lg grid grid-cols-3">
                     <!-- single item start  -->
                     <div class="flex flex-col gap-1 justify-center text-center ">
                       <div class="flex justify-center items-center w-7 h-7 mx-auto">
@@ -365,7 +344,7 @@
                         class="text-center justify-start text-text-body-primary text-xs font-bold font-Inter leading-normal">
                         Real Madrid</h4>
                       <button
-                        class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none">
+                        class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none hover:outline-white hover:outline-1 hover:bg-surface-secondary">
                         7.30
                       </button>
                     </div>
@@ -381,7 +360,7 @@
                         class="text-center justify-start text-text-body-primary text-xs font-bold font-Inter leading-normal">
                         Draw</h4>
                       <button
-                        class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none">
+                        class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none hover:outline-white hover:outline-1 hover:bg-surface-secondary">
                         2.80
                       </button>
                     </div>
@@ -396,7 +375,7 @@
                         class="text-center justify-start text-text-body-primary text-xs font-bold font-Inter leading-normal">
                         Manchest..</h4>
                       <button
-                        class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none">
+                        class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none hover:outline-white hover:outline-1 hover:bg-surface-secondary">
                         1.03
                       </button>
                     </div>
@@ -442,8 +421,7 @@
                     </a>
 
                   </div>
-                  <div
-                    class="px-3 pt-2 pb-3 bg-gradient-to-b from-[#19387e] to-[#17274b] gap-2 rounded-bl-lg rounded-br-lg grid grid-cols-3">
+                  <div class="px-3 pt-2 pb-3 Bggradient gap-2 rounded-bl-lg rounded-br-lg grid grid-cols-3">
                     <!-- single item start  -->
                     <div class="flex flex-col gap-1 justify-center text-center ">
                       <div class="flex justify-center items-center w-7 h-7 mx-auto">
@@ -453,7 +431,7 @@
                         class="text-center justify-start text-text-body-primary text-xs font-bold font-Inter leading-normal">
                         Real Madrid</h4>
                       <button
-                        class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none">
+                        class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none hover:outline-white hover:outline-1 hover:bg-surface-secondary">
                         7.30
                       </button>
                     </div>
@@ -469,7 +447,7 @@
                         class="text-center justify-start text-text-body-primary text-xs font-bold font-Inter leading-normal">
                         Draw</h4>
                       <button
-                        class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none">
+                        class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none hover:outline-white hover:outline-1 hover:bg-surface-secondary">
                         2.80
                       </button>
                     </div>
@@ -484,7 +462,7 @@
                         class="text-center justify-start text-text-body-primary text-xs font-bold font-Inter leading-normal">
                         Manchest..</h4>
                       <button
-                        class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none">
+                        class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none hover:outline-white hover:outline-1 hover:bg-surface-secondary">
                         1.03
                       </button>
                     </div>
@@ -529,8 +507,7 @@
                     </a>
 
                   </div>
-                  <div
-                    class="px-3 pt-2 pb-3 bg-gradient-to-b from-[#19387e] to-[#17274b] gap-2 rounded-bl-lg rounded-br-lg grid grid-cols-3">
+                  <div class="px-3 pt-2 pb-3 Bggradient gap-2 rounded-bl-lg rounded-br-lg grid grid-cols-3">
                     <!-- single item start  -->
                     <div class="flex flex-col gap-1 justify-center text-center ">
                       <div class="flex justify-center items-center w-7 h-7 mx-auto">
@@ -540,7 +517,7 @@
                         class="text-center justify-start text-text-body-primary text-xs font-bold font-Inter leading-normal">
                         Real Madrid</h4>
                       <button
-                        class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none">
+                        class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none hover:outline-white hover:outline-1 hover:bg-surface-secondary">
                         7.30
                       </button>
                     </div>
@@ -556,7 +533,7 @@
                         class="text-center justify-start text-text-body-primary text-xs font-bold font-Inter leading-normal">
                         Draw</h4>
                       <button
-                        class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none">
+                        class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none hover:outline-white hover:outline-1 hover:bg-surface-secondary">
                         2.80
                       </button>
                     </div>
@@ -571,7 +548,7 @@
                         class="text-center justify-start text-text-body-primary text-xs font-bold font-Inter leading-normal">
                         Manchest..</h4>
                       <button
-                        class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none">
+                        class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none hover:outline-white hover:outline-1 hover:bg-surface-secondary">
                         1.03
                       </button>
                     </div>
@@ -616,8 +593,7 @@
                     </a>
 
                   </div>
-                  <div
-                    class="px-3 pt-2 pb-3 bg-gradient-to-b from-[#19387e] to-[#17274b] gap-2 rounded-bl-lg rounded-br-lg grid grid-cols-3">
+                  <div class="px-3 pt-2 pb-3 Bggradient gap-2 rounded-bl-lg rounded-br-lg grid grid-cols-3">
                     <!-- single item start  -->
                     <div class="flex flex-col gap-1 justify-center text-center ">
                       <div class="flex justify-center items-center w-7 h-7 mx-auto">
@@ -627,7 +603,7 @@
                         class="text-center justify-start text-text-body-primary text-xs font-bold font-Inter leading-normal">
                         Real Madrid</h4>
                       <button
-                        class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none">
+                        class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none hover:outline-white hover:outline-1 hover:bg-surface-secondary">
                         7.30
                       </button>
                     </div>
@@ -643,7 +619,7 @@
                         class="text-center justify-start text-text-body-primary text-xs font-bold font-Inter leading-normal">
                         Draw</h4>
                       <button
-                        class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none">
+                        class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none hover:outline-white hover:outline-1 hover:bg-surface-secondary">
                         2.80
                       </button>
                     </div>
@@ -658,7 +634,7 @@
                         class="text-center justify-start text-text-body-primary text-xs font-bold font-Inter leading-normal">
                         Manchest..</h4>
                       <button
-                        class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none">
+                        class="self-stretch h-9 bg-surface-primary rounded-lg cursor-pointer items-center text-center justify-center text-text-body-primary text-sm font-normal font-Inter leading-none hover:outline-white hover:outline-1 hover:bg-surface-secondary">
                         1.03
                       </button>
                     </div>
@@ -680,60 +656,175 @@
 
           <!-- Slot Games (Empty placeholder) -->
           <div data-tab-content="slot" class="tab-pane hidden">
-            <div class="overflow-x-auto">
+            <div class="overflow-x-auto overflow-y-hidden">
               <div class="grid grid-cols-4 gap-[30px] lg:min-w-auto min-w-[1200px]">
                 <!-- single item start  -->
-                <div>
-                  <a href="" class="w-full flex flex-col gap-2">
+
+                <div class="w-full flex flex-col gap-2">
+                  <div class="relative group">
                     <img src="./images/temple.png" alt="temple" class="rounded-lg">
-                    <span class="flex flex-col">
-                      <span class="text-text-body-primary text-sm font-bold font-Inter leading-normal">Temple
-                        Tumble</span>
-                      <span class="text-text-body-primary text-xs font-normal font-Inter leading-none">Game
-                        Provider</span>
-                    </span>
-                  </a>
+                    <div
+                      class="absolute left-0 top-0 w-full h-full z-10 p-3  bg-gradient-to-b from-blue-700 via-blue-700 to-blue-700/0 rounded-lg inline-flex flex-col justify-start items-center gap-3 opacity-0 group-hover:opacity-100 ease-in-out duration-700">
+                      <div class="w-full">
+                        <h4
+                          class="text-start justify-center text-blue-50 text-base font-bold font-['Inter'] leading-tight">
+                          Temple
+                          Tumble</h4>
+                        <p
+                          class="text-start justify-center text-blue-50 text-xs font-normal font-['Inter'] leading-none">
+                          Game Provider
+                        </p>
+                      </div>
+                      <div class="w-40 h-16 flex flex-col justify-center items-center gap-2">
+                        <a href=""
+                          class="w-full h-8 max-w-96 min-w-20 px-4 py-2 bg-surface-action-primary rounded-full  text-center justify-center text-text-on-action text-xs font-bold font-['Inter'] leading-none hover:bg-green-800">
+                          Play Now
+
+                        </a>
+                        <a href=""
+                          class="w-full h-8 max-w-96 min-w-20 px-4 py-2 rounded-full outline-1 outline-offset-[-1px] outline-border-highlight  justify-center text-text-action text-xs font-bold font-['Inter'] leading-none text-center hover:bg-surface-input-highlight hover:outline-surface-input-highlight hover:text-white">
+                          Play for
+                          Fun
+                        </a>
+                      </div>
+
+
+                    </div>
+                  </div>
+                  <span class="flex flex-col">
+                    <span class="text-text-body-primary text-sm font-bold font-Inter leading-normal">Temple
+                      Tumble</span>
+                    <span class="text-text-body-primary text-xs font-normal font-Inter leading-none">Game
+                      Provider</span>
+                  </span>
                 </div>
+
                 <!-- single item end -->
 
                 <!-- single item start  -->
-                <div>
-                  <a href="" class="w-full flex flex-col gap-2">
+
+                <div class="w-full flex flex-col gap-2">
+                  <div class="relative group">
                     <img src="./images/sweet.png" alt="temple" class="rounded-lg">
-                    <span class="flex flex-col">
-                      <span class="text-text-body-primary text-sm font-bold font-Inter leading-normal">Sweet Bonanza
-                        1000</span>
-                      <span class="text-text-body-primary text-xs font-normal font-Inter leading-none">Game
-                        Provider</span>
-                    </span>
-                  </a>
+                    <div
+                      class="absolute left-0 top-0 w-full h-full z-10 p-3  bg-gradient-to-b from-blue-700 via-blue-700 to-blue-700/0 rounded-lg inline-flex flex-col justify-start items-center gap-3 opacity-0 group-hover:opacity-100 ease-in-out duration-700">
+                      <div class="w-full">
+                        <h4
+                          class="text-start justify-center text-blue-50 text-base font-bold font-['Inter'] leading-tight">
+                          Sweet Bonanza
+                          1000</h4>
+                        <p
+                          class="text-start justify-center text-blue-50 text-xs font-normal font-['Inter'] leading-none">
+                          Game Provider
+                        </p>
+                      </div>
+                      <div class="w-40 h-16 flex flex-col justify-center items-center gap-2">
+                        <a href=""
+                          class="w-full h-8 max-w-96 min-w-20 px-4 py-2 bg-surface-action-primary rounded-full  text-center justify-center text-text-on-action text-xs font-bold font-['Inter'] leading-none hover:bg-green-800">
+                          Play Now
+
+                        </a>
+                        <a href=""
+                          class="w-full h-8 max-w-96 min-w-20 px-4 py-2 rounded-full outline-1 outline-offset-[-1px] outline-border-highlight  justify-center text-text-action text-xs font-bold font-['Inter'] leading-none text-center hover:bg-surface-input-highlight hover:outline-surface-input-highlight hover:text-white">
+                          Play for
+                          Fun
+                        </a>
+                      </div>
+
+
+                    </div>
+                  </div>
+                  <span class="flex flex-col">
+                    <span class="text-text-body-primary text-sm font-bold font-Inter leading-normal">Sweet Bonanza
+                      1000</span>
+                    <span class="text-text-body-primary text-xs font-normal font-Inter leading-none">Game
+                      Provider</span>
+                  </span>
                 </div>
+
                 <!-- single item end -->
                 <!-- single item start  -->
-                <div>
-                  <a href="" class="w-full flex flex-col gap-2">
+
+                <div class="w-full flex flex-col gap-2">
+                  <div class="relative group">
                     <img src="./images/legacy.png" alt="temple" class="rounded-lg">
-                    <span class="flex flex-col">
-                      <span class="text-text-body-primary text-sm font-bold font-Inter leading-normal">Legacy of
-                        Kong</span>
-                      <span class="text-text-body-primary text-xs font-normal font-Inter leading-none">Game
-                        Provider</span>
-                    </span>
-                  </a>
+                    <div
+                      class="absolute left-0 top-0 w-full h-full z-10 p-3  bg-gradient-to-b from-blue-700 via-blue-700 to-blue-700/0 rounded-lg inline-flex flex-col justify-start items-center gap-3 opacity-0 group-hover:opacity-100 ease-in-out duration-700">
+                      <div class="w-full">
+                        <h4
+                          class="text-start justify-center text-blue-50 text-base font-bold font-['Inter'] leading-tight">
+                          Legacy of
+                          Kong</h4>
+                        <p
+                          class="text-start justify-center text-blue-50 text-xs font-normal font-['Inter'] leading-none">
+                          Game Provider
+                        </p>
+                      </div>
+                      <div class="w-40 h-16 flex flex-col justify-center items-center gap-2">
+                        <a href=""
+                          class="w-full h-8 max-w-96 min-w-20 px-4 py-2 bg-surface-action-primary rounded-full  text-center justify-center text-text-on-action text-xs font-bold font-['Inter'] leading-none hover:bg-green-800">
+                          Play Now
+
+                        </a>
+                        <a href=""
+                          class="w-full h-8 max-w-96 min-w-20 px-4 py-2 rounded-full outline-1 outline-offset-[-1px] outline-border-highlight  justify-center text-text-action text-xs font-bold font-['Inter'] leading-none text-center hover:bg-surface-input-highlight hover:outline-surface-input-highlight hover:text-white">
+                          Play for
+                          Fun
+                        </a>
+                      </div>
+
+
+                    </div>
+                  </div>
+                  <span class="flex flex-col">
+                    <span class="text-text-body-primary text-sm font-bold font-Inter leading-normal">Legacy of
+                      Kong</span>
+                    <span class="text-text-body-primary text-xs font-normal font-Inter leading-none">Game
+                      Provider</span>
+                  </span>
                 </div>
+
                 <!-- single item end -->
                 <!-- single item start  -->
-                <div>
-                  <a href="" class="w-full flex flex-col gap-2">
-                    <img src="./images/temple.png" alt="temple" class="rounded-lg">
-                    <span class="flex flex-col">
-                      <span class="text-text-body-primary text-sm font-bold font-Inter leading-normal">Temple
-                        Tumble</span>
-                      <span class="text-text-body-primary text-xs font-normal font-Inter leading-none">Game
-                        Provider</span>
-                    </span>
-                  </a>
+
+                <div class="w-full flex flex-col gap-2">
+                  <div class="relative group">
+                    <img src="./images/wisdom.png" alt="temple" class="rounded-lg">
+                    <div
+                      class="absolute left-0 top-0 w-full h-full z-10 p-3  bg-gradient-to-b from-blue-700 via-blue-700 to-blue-700/0 rounded-lg inline-flex flex-col justify-start items-center gap-3 opacity-0 group-hover:opacity-100 ease-in-out duration-700">
+                      <div class="w-full">
+                        <h4
+                          class="text-start justify-center text-blue-50 text-base font-bold font-['Inter'] leading-tight">
+                          Wisdom of Athena</h4>
+                        <p
+                          class="text-start justify-center text-blue-50 text-xs font-normal font-['Inter'] leading-none">
+                          Game Provider
+                        </p>
+                      </div>
+                      <div class="w-40 h-16 flex flex-col justify-center items-center gap-2">
+                        <a href=""
+                          class="w-full h-8 max-w-96 min-w-20 px-4 py-2 bg-surface-action-primary rounded-full  text-center justify-center text-text-on-action text-xs font-bold font-['Inter'] leading-none hover:bg-green-800">
+                          Play Now
+
+                        </a>
+                        <a href=""
+                          class="w-full h-8 max-w-96 min-w-20 px-4 py-2 rounded-full outline-1 outline-offset-[-1px] outline-border-highlight  justify-center text-text-action text-xs font-bold font-['Inter'] leading-none text-center hover:bg-surface-input-highlight hover:outline-surface-input-highlight hover:text-white">
+                          Play for
+                          Fun
+                        </a>
+                      </div>
+
+
+                    </div>
+                  </div>
+                  <span class="flex flex-col">
+                    <span class="text-text-body-primary text-sm font-bold font-Inter leading-normal">Wisdom of
+                      Athena</span>
+                    <span class="text-text-body-primary text-xs font-normal font-Inter leading-none">Game
+                      Provider</span>
+                  </span>
                 </div>
+
                 <!-- single item end -->
 
               </div>
@@ -749,60 +840,175 @@
 
           <!-- Casino Games (Empty placeholder) -->
           <div data-tab-content="casino" class="tab-pane hidden">
-            <div class="overflow-x-auto">
+            <div class="overflow-x-auto overflow-y-hidden">
               <div class="grid grid-cols-4 gap-[30px] lg:min-w-auto min-w-[1200px]">
                 <!-- single item start  -->
-                <div>
-                  <a href="" class="w-full flex flex-col gap-2">
+
+                <div class="w-full flex flex-col gap-2">
+                  <div class="relative group">
                     <img src="./images/super.png" alt="temple" class="rounded-lg">
-                    <span class="flex flex-col">
-                      <span class="text-text-body-primary text-sm font-bold font-Inter leading-normal">Super Speed
-                        Baccarat Live</span>
-                      <span class="text-text-body-primary text-xs font-normal font-Inter leading-none">Game
-                        Provider</span>
-                    </span>
-                  </a>
+                    <div
+                      class="absolute left-0 top-0 w-full h-full z-10 p-3  bg-gradient-to-b from-blue-700 via-blue-700 to-blue-700/0 rounded-lg inline-flex flex-col justify-start items-center gap-3 opacity-0 group-hover:opacity-100 ease-in-out duration-700">
+                      <div class="w-full">
+                        <h4
+                          class="text-start justify-center text-blue-50 text-base font-bold font-['Inter'] leading-tight">
+                          Super Speed
+                          BaccaratLive</h4>
+                        <p
+                          class="text-start justify-center text-blue-50 text-xs font-normal font-['Inter'] leading-none">
+                          Game Provider
+                        </p>
+                      </div>
+                      <div class="w-40 h-16 flex flex-col justify-center items-center gap-2">
+                        <a href=""
+                          class="w-full h-8 max-w-96 min-w-20 px-4 py-2 bg-surface-action-primary rounded-full  text-center justify-center text-text-on-action text-xs font-bold font-['Inter'] leading-none hover:bg-green-800">
+                          Play Now
+
+                        </a>
+                        <a href=""
+                          class="w-full h-8 max-w-96 min-w-20 px-4 py-2 rounded-full outline-1 outline-offset-[-1px] outline-border-highlight  justify-center text-text-action text-xs font-bold font-['Inter'] leading-none text-center hover:bg-surface-input-highlight hover:outline-surface-input-highlight hover:text-white">
+                          Play for
+                          Fun
+                        </a>
+                      </div>
+
+
+                    </div>
+                  </div>
+                  <span class="flex flex-col">
+                    <span class="text-text-body-primary text-sm font-bold font-Inter leading-normal">Super Speed
+                      Baccarat Live</span>
+                    <span class="text-text-body-primary text-xs font-normal font-Inter leading-none">Game
+                      Provider</span>
+                  </span>
                 </div>
+
                 <!-- single item end -->
 
                 <!-- single item start  -->
-                <div>
-                  <a href="" class="w-full flex flex-col gap-2">
+
+                <div class="w-full flex flex-col gap-2">
+                  <div class="relative group">
                     <img src="./images/lightning.png" alt="temple" class="rounded-lg">
-                    <span class="flex flex-col">
-                      <span class="text-text-body-primary text-sm font-bold font-Inter leading-normal">Lightning
-                        Dragon
-                        Tiger</span>
-                      <span class="text-text-body-primary text-xs font-normal font-Inter leading-none">Game
-                        Provider</span>
-                    </span>
-                  </a>
+                    <div
+                      class="absolute left-0 top-0 w-full h-full z-10 p-3  bg-gradient-to-b from-blue-700 via-blue-700 to-blue-700/0 rounded-lg inline-flex flex-col justify-start items-center gap-3 opacity-0 group-hover:opacity-100 ease-in-out duration-700">
+                      <div class="w-full">
+                        <h4
+                          class="text-start justify-center text-blue-50 text-base font-bold font-['Inter'] leading-tight">
+                          Lightning
+                          Dragon
+                          Tiger</h4>
+                        <p
+                          class="text-start justify-center text-blue-50 text-xs font-normal font-['Inter'] leading-none">
+                          Game Provider
+                        </p>
+                      </div>
+                      <div class="w-40 h-16 flex flex-col justify-center items-center gap-2">
+                        <a href=""
+                          class="w-full h-8 max-w-96 min-w-20 px-4 py-2 bg-surface-action-primary rounded-full  text-center justify-center text-text-on-action text-xs font-bold font-['Inter'] leading-none hover:bg-green-800">
+                          Play Now
+
+                        </a>
+                        <a href=""
+                          class="w-full h-8 max-w-96 min-w-20 px-4 py-2 rounded-full outline-1 outline-offset-[-1px] outline-border-highlight  justify-center text-text-action text-xs font-bold font-['Inter'] leading-none text-center hover:bg-surface-input-highlight hover:outline-surface-input-highlight hover:text-white">
+                          Play for
+                          Fun
+                        </a>
+                      </div>
+
+
+                    </div>
+                  </div>
+                  <span class="flex flex-col">
+                    <span class="text-text-body-primary text-sm font-bold font-Inter leading-normal">Lightning
+                      Dragon
+                      Tiger</span>
+                    <span class="text-text-body-primary text-xs font-normal font-Inter leading-none">Game
+                      Provider</span>
+                  </span>
                 </div>
+
                 <!-- single item end -->
                 <!-- single item start  -->
-                <div>
-                  <a href="" class="w-full flex flex-col gap-2">
+
+                <div class="w-full flex flex-col gap-2">
+                  <div class="relative group">
                     <img src="./images/blackjack.png" alt="temple" class="rounded-lg">
-                    <span class="flex flex-col">
-                      <span class="text-text-body-primary text-sm font-bold font-Inter leading-normal">Blackjack</span>
-                      <span class="text-text-body-primary text-xs font-normal font-Inter leading-none">Game
-                        Provider</span>
-                    </span>
-                  </a>
+                    <div
+                      class="absolute left-0 top-0 w-full h-full z-10 p-3  bg-gradient-to-b from-blue-700 via-blue-700 to-blue-700/0 rounded-lg inline-flex flex-col justify-start items-center gap-3 opacity-0 group-hover:opacity-100 ease-in-out duration-700">
+                      <div class="w-full">
+                        <h4
+                          class="text-start justify-center text-blue-50 text-base font-bold font-['Inter'] leading-tight">
+                          Blackjack</h4>
+                        <p
+                          class="text-start justify-center text-blue-50 text-xs font-normal font-['Inter'] leading-none">
+                          Game Provider
+                        </p>
+                      </div>
+                      <div class="w-40 h-16 flex flex-col justify-center items-center gap-2">
+                        <a href=""
+                          class="w-full h-8 max-w-96 min-w-20 px-4 py-2 bg-surface-action-primary rounded-full  text-center justify-center text-text-on-action text-xs font-bold font-['Inter'] leading-none hover:bg-green-800">
+                          Play Now
+
+                        </a>
+                        <a href=""
+                          class="w-full h-8 max-w-96 min-w-20 px-4 py-2 rounded-full outline-1 outline-offset-[-1px] outline-border-highlight  justify-center text-text-action text-xs font-bold font-['Inter'] leading-none text-center hover:bg-surface-input-highlight hover:outline-surface-input-highlight hover:text-white">
+                          Play for
+                          Fun
+                        </a>
+                      </div>
+
+
+                    </div>
+                  </div>
+                  <span class="flex flex-col">
+                    <span class="text-text-body-primary text-sm font-bold font-Inter leading-normal">Blackjack</span>
+                    <span class="text-text-body-primary text-xs font-normal font-Inter leading-none">Game
+                      Provider</span>
+                  </span>
                 </div>
+
                 <!-- single item end -->
                 <!-- single item start  -->
-                <div>
-                  <a href="" class="w-full flex flex-col gap-2">
+                <div class="w-full flex flex-col gap-2">
+                  <div class="relative group">
                     <img src="./images/lightning-live.png" alt="temple" class="rounded-lg">
-                    <span class="flex flex-col">
-                      <span class="text-text-body-primary text-sm font-bold font-Inter leading-normal">Lightning
-                        Baccarat Live</span>
-                      <span class="text-text-body-primary text-xs font-normal font-Inter leading-none">Game
-                        Provider</span>
-                    </span>
-                  </a>
+                    <div
+                      class="absolute left-0 top-0 w-full h-full z-10 p-3  bg-gradient-to-b from-blue-700 via-blue-700 to-blue-700/0 rounded-lg inline-flex flex-col justify-start items-center gap-3 opacity-0 group-hover:opacity-100 ease-in-out duration-700">
+                      <div class="w-full">
+                        <h4
+                          class="text-start justify-center text-blue-50 text-base font-bold font-['Inter'] leading-tight">
+                          Lightning
+                          BaccaratLive</h4>
+                        <p
+                          class="text-start justify-center text-blue-50 text-xs font-normal font-['Inter'] leading-none">
+                          Game Provider
+                        </p>
+                      </div>
+                      <div class="w-40 h-16 flex flex-col justify-center items-center gap-2">
+                        <a href=""
+                          class="w-full h-8 max-w-96 min-w-20 px-4 py-2 bg-surface-action-primary rounded-full  text-center justify-center text-text-on-action text-xs font-bold font-['Inter'] leading-none hover:bg-green-800">
+                          Play Now
+
+                        </a>
+                        <a href=""
+                          class="w-full h-8 max-w-96 min-w-20 px-4 py-2 rounded-full outline-1 outline-offset-[-1px] outline-border-highlight  justify-center text-text-action text-xs font-bold font-['Inter'] leading-none text-center hover:bg-surface-input-highlight hover:outline-surface-input-highlight hover:text-white">
+                          Play for
+                          Fun
+                        </a>
+                      </div>
+
+
+                    </div>
+                  </div>
+                  <span class="flex flex-col">
+                    <span class="text-text-body-primary text-sm font-bold font-Inter leading-normal">Lightning
+                      Baccarat Live</span>
+                    <span class="text-text-body-primary text-xs font-normal font-Inter leading-none">Game
+                      Provider</span>
+                  </span>
                 </div>
+
                 <!-- single item end -->
 
               </div>
@@ -1070,7 +1276,7 @@
           <!-- Navigation Buttons -->
           <div class="absolute bottom-7 right-0 lg:right-6 flex space-x-3">
             <button id="prevBtn"
-              class=" flex items-center justify-center w-10 h-10 p-1 bg-surface-input rounded-full gap-2.5 cursor-pointer              ">
+              class=" flex items-center justify-center w-10 h-10 p-1 bg-surface-input rounded-full gap-2.5 cursor-pointer hover:ring-1 hover:ring-white hover:bg-surface-secondary">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M20.2761 23.7462C19.7554 24.2669 18.9112 24.2669 18.3905 23.7462L11.7238 17.0795C11.2031 16.5588 11.2031 15.7146 11.7238 15.1939L18.3905 8.52724C18.9112 8.00654 19.7554 8.00654 20.2761 8.52724C20.7968 9.04794 20.7968 9.89216 20.2761 10.4129L14.5522 16.1367L20.2761 21.8606C20.7968 22.3813 20.7968 23.2255 20.2761 23.7462Z"
@@ -1078,7 +1284,7 @@
               </svg>
             </button>
             <button id="nextBtn"
-              class=" flex items-center justify-center w-10 h-10 p-1 bg-surface-input rounded-full gap-2.5 cursor-pointer              ">
+              class=" flex items-center justify-center w-10 h-10 p-1 bg-surface-input rounded-full gap-2.5 cursor-pointer  hover:ring-1 hover:ring-white hover:bg-surface-secondary">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M11.7239 8.52724C12.2446 8.00654 13.0888 8.00654 13.6095 8.52724L20.2762 15.1939C20.7969 15.7146 20.7969 16.5588 20.2762 17.0795L13.6095 23.7462C13.0888 24.2669 12.2446 24.2669 11.7239 23.7462C11.2032 23.2255 11.2032 22.3813 11.7239 21.8606L17.4478 16.1367L11.7239 10.4129C11.2032 9.89216 11.2032 9.04794 11.7239 8.52724Z"
@@ -1258,11 +1464,15 @@
           <h4 class="text-text-headings text-base lg:text-2xl font-bold font-Inter leading-tight lg:leading-loose">Games
           </h4>
           <ul class="flex flex-col gap-2">
-            <li><a href="" class=" text-text-body-primary text-sm font-medium font-Inter leading-none">Sports</a>
+            <li><a href=""
+                class=" text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action">Sports</a>
             </li>
-            <li><a href="" class=" text-text-body-primary text-sm font-medium font-Inter leading-none">Slots </a>
+            <li><a href=""
+                class=" text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action">Slots
+              </a>
             </li>
-            <li><a href="" class=" text-text-body-primary text-sm font-medium font-Inter leading-none">Casino</a>
+            <li><a href=""
+                class=" text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action">Casino</a>
             </li>
           </ul>
         </div>
@@ -1270,13 +1480,18 @@
           <h4 class="text-text-headings text-base lg:text-2xl font-bold font-Inter leading-tight lg:leading-loose">
             Rewards</h4>
           <ul class="flex flex-col gap-2">
-            <li><a href="#" class=" text-text-body-primary text-sm font-medium font-Inter leading-none">Refer a
+            <li><a href="#"
+                class=" text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action">Refer
+                a
                 Friend</a></li>
-            <li><a href="#" class=" text-text-body-primary text-sm font-medium font-Inter leading-none">VIP
+            <li><a href="#"
+                class=" text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action">VIP
                 Program</a></li>
-            <li><a href="#" class=" text-text-body-primary text-sm font-medium font-Inter leading-none">Promotions</a>
+            <li><a href="#"
+                class=" text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action">Promotions</a>
             </li>
-            <li><a href="#" class=" text-text-body-primary text-sm font-medium font-Inter leading-none">Affiliate
+            <li><a href="#"
+                class=" text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action">Affiliate
                 Program</a></li>
           </ul>
         </div>
@@ -1284,19 +1499,29 @@
           <h4 class="text-text-headings text-base lg:text-2xl font-bold font-Inter leading-tight lg:leading-loose">
             Information</h4>
           <ul class="flex flex-col gap-2">
-            <li><a href="#" class=" text-text-body-primary text-sm font-medium font-Inter leading-none">About Us</a>
+            <li><a href="#"
+                class=" text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action">About
+                Us</a>
             </li>
-            <li><a href="#" class=" text-text-body-primary text-sm font-medium font-Inter leading-none">Terms and
+            <li><a href="#"
+                class=" text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action">Terms
+                and
                 Conditions</a></li>
-            <li><a href="#" class=" text-text-body-primary text-sm font-medium font-Inter leading-none">Bonus Terms
+            <li><a href="#"
+                class=" text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action">Bonus
+                Terms
                 and Conditions</a></li>
-            <li><a href="#" class=" text-text-body-primary text-sm font-medium font-Inter leading-none">AML
+            <li><a href="#"
+                class=" text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action">AML
                 Policy</a></li>
-            <li><a href="#" class=" text-text-body-primary text-sm font-medium font-Inter leading-none">KYC
+            <li><a href="#"
+                class=" text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action">KYC
                 Policy</a></li>
-            <li><a href="#" class=" text-text-body-primary text-sm font-medium font-Inter leading-none">Protection
+            <li><a href="#"
+                class=" text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action">Protection
                 of Minors Policy</a></li>
-            <li><a href="#" class=" text-text-body-primary text-sm font-medium font-Inter leading-none">Privacy
+            <li><a href="#"
+                class=" text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action">Privacy
                 Policy</a></li>
           </ul>
         </div>
@@ -1304,17 +1529,23 @@
           <h4 class="text-text-headings text-base lg:text-2xl font-bold font-Inter leading-tight lg:leading-loose">
             Support</h4>
           <ul class="flex flex-col gap-2">
-            <li><a href="#" class=" text-text-body-primary text-sm font-medium font-Inter leading-none">Contact
+            <li><a href="#"
+                class=" text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action">Contact
                 Us</a></li>
-            <li><a href="#" class=" text-text-body-primary text-sm font-medium font-Inter leading-none">Blog</a>
+            <li><a href="#"
+                class=" text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action">Blog</a>
             </li>
-            <li><a href="#" class=" text-text-body-primary text-sm font-medium font-Inter leading-none">Sports
+            <li><a href="#"
+                class=" text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action">Sports
                 Betting</a></li>
-            <li><a href="#" class=" text-text-body-primary text-sm font-medium font-Inter leading-none">Responsible
+            <li><a href="#"
+                class=" text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action">Responsible
                 Gaming (basic principles)</a></li>
-            <li><a href="#" class=" text-text-body-primary text-sm font-medium font-Inter leading-none">Anti-Scam
+            <li><a href="#"
+                class=" text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action">Anti-Scam
                 Certificate</a></li>
-            <li><a href="#" class=" text-text-body-primary text-sm font-medium font-Inter leading-none">GemBet
+            <li><a href="#"
+                class=" text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action">GemBet
                 Authenticator</a></li>
           </ul>
         </div>
@@ -1323,37 +1554,37 @@
             Follow us</h4>
           <ul class="flex md:flex-col flex-row justify-center lg:justify-start gap-2">
             <li><a href="#"
-                class=" flex flex-row gap-2 text-text-body-primary text-sm font-medium font-Inter leading-none">
+                class=" flex flex-row gap-2 text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action">
                 <span class="w-4"><img src="./images/Telegram.svg" alt="Telegram"></span>
 
                 <span class="md:block hidden">Telegram</span></a>
             </li>
             <li><a href="#"
-                class=" flex flex-row gap-2 text-text-body-primary text-sm font-medium font-Inter leading-none">
+                class=" flex flex-row gap-2 text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action">
                 <span class="w-4"><img src="./images/TwitterX.svg" alt="Twitter"></span>
                 <span class="md:block hidden"> X (formerly
                   Twitter)</span></a>
               </a>
             </li>
             <li><a href="#"
-                class=" flex flex-row gap-2 text-text-body-primary text-sm font-medium font-Inter leading-none">
+                class=" flex flex-row gap-2 text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action">
                 <span class="w-4"><img src="./images/youtube.svg" alt="youtube"></span>
                 <span class="md:block hidden">Youtube</span></a>
               </a>
             </li>
             <li><a href="#"
-                class=" flex flex-row gap-2 text-text-body-primary text-sm font-medium font-Inter leading-none">
+                class=" flex flex-row gap-2 text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action">
                 <span class="w-4"><img src="./images/instagram.svg" alt="Instagram"></span>
                 <span class="md:block hidden">Instagram</span></a>
               </a></li>
             <li><a href="#"
-                class=" flex flex-row gap-2 text-text-body-primary text-sm font-medium font-Inter leading-none">
+                class=" flex flex-row gap-2 text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action">
                 <span class="w-4"><img src="./images/facebook.svg" alt="facebook"></span>
                 <span class="md:block hidden">Facebook</span></a>
               </a>
             </li>
             <li><a href="#"
-                class=" flex flex-row gap-2 text-text-body-primary text-sm font-medium font-Inter leading-none">
+                class=" flex flex-row gap-2 text-text-body-primary text-sm font-medium font-Inter leading-none hover:text-text-action">
                 <span class="w-4"><img src="./images/tiktok.svg" alt="tiktok"></span>
                 <span class="md:block hidden">TikTok</span></a>
               </a>
@@ -1586,8 +1817,8 @@
 
       <li class="relative dropdown">
         <button
-          class="dropdown-toggle justify-center text-text-body-primary text-xs font-medium font-['Inter'] leading-none text-center flex flex-col gap-1"
-          data-dropdown>
+          class="open-modal  justify-center text-text-body-primary text-xs font-medium font-['Inter'] leading-none text-center flex flex-col gap-1"
+          data-modal-target="modal-1">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
             class="mx-auto">
             <path
@@ -1660,7 +1891,32 @@
         </a></li>
     </ul>
   </div>
+  <!-- Modal 1 -->
+  <div id="modal-1" class="modal fixed inset-0 z-50 flex items-center justify-center hidden">
+    <div class="modal-overlay absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-300"></div>
+    <div
+      class="modal-content relative bg-gray-900 rounded-xl shadow-lg max-w-[400px] min-h-[100px] w-full mx-4 px-2  pt-8 pb-6 scale-95 opacity-0 transition-all duration-300">
+      <button
+        class="close-modal absolute top-0 right-2 text-gray-500 hover:text-gray-800 text-3xl cursor-pointer">&times;</button>
+      <form class="relative max-w-full w-[250px] sm:w-[300px] mx-auto">
+        <input type="text" placeholder="Search..."
+          class="w-full py-4 pl-6 pr-12 rounded-full bg-[#e6f0ff] text-gray-700 placeholder-gray-400 shadow-[inset_2px_2px_6px_#cfd9e6,inset_-2px_-2px_6px_#ffffff] outline-none focus:ring-2 focus:ring-blue-200 transition" />
+        <div class="absolute top-1/2 right-4 transform -translate-y-1/2 text-gray-900">
+          <!-- Search Icon -->
+          <button class="p-2 cursor-pointer h-[56px]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1010.5 18a7.5 7.5 0 006.15-3.35z" />
+            </svg>
+          </button>
+        </div>
+      </form>
 
+
+
+    </div>
+  </div>
   <script src="./js/index.js"></script>
 </body>
 

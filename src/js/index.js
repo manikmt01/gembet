@@ -120,3 +120,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// modal
+
+document.addEventListener('DOMContentLoaded', () => {
+  const openButtons = document.querySelectorAll('.open-modal');
+  const modals = document.querySelectorAll('.modal');
+
+  openButtons.forEach(button => {
+    const targetId = button.dataset.modalTarget;
+    const modal = document.getElementById(targetId);
+    const overlay = modal.querySelector('.modal-overlay');
+    const content = modal.querySelector('.modal-content');
+    const closeBtn = modal.querySelector('.close-modal');
+
+    // Open Modal
+    button.addEventListener('click', () => {
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        overlay.classList.add('opacity-100');
+        content.classList.add('opacity-100', 'scale-100');
+        content.classList.remove('scale-95');
+      }, 10);
+    });
+
+    // Close Modal
+    const closeModal = () => {
+      overlay.classList.remove('opacity-100');
+      content.classList.remove('opacity-100', 'scale-100');
+      content.classList.add('scale-95');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 300);
+    };
+
+    overlay.addEventListener('click', closeModal);
+    closeBtn.addEventListener('click', closeModal);
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        closeModal();
+      }
+    });
+  });
+});

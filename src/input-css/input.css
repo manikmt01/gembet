@@ -97,7 +97,16 @@ body {
 .hot {
   background-image: url(../images/hot.png);
 }
-
+.Bggradient {
+  @apply bg-gradient-to-b from-[#19387e] to-[#17274b];
+}
+.Bggradient:hover {
+  background: linear-gradient(
+    180deg,
+    var(--surface-information, #0a48c5) 0%,
+    var(--surface-input, #17274b) 100%
+  );
+}
 .cardBg {
   background-image: url(../images/card-top.png);
 }
@@ -115,6 +124,7 @@ body {
       no-repeat,
     #070d18;
 }
+
 .offcanvas {
   transition: transform 0.3s ease-in-out;
   transform: translateX(-100%);
@@ -158,4 +168,26 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+.hoverEffect {
+  position: relative;
+  padding: 6px 0;
+}
+.hoverEffect:after {
+  content: '';
+  background-color: var(--color-text-action);
+  border-radius: 6px;
+  width: 0%;
+  height: 3px;
+  position: absolute;
+  bottom: -14px;
+  left: 0;
+  opacity: 0;
+  transition: all ease-in-out 0.5s;
+}
+.hoverEffect:hover::after {
+  opacity: 1;
+  width: 100%;
+  transition: all ease-in-out 0.5s;
 }
